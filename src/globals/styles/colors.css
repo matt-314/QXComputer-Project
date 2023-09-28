@@ -1,0 +1,101 @@
+:root {
+    /* RED */
+    --qxCherry100: #fff1f0;
+    --qxCherry200: #fddfdd;
+    --qxCherry300: #ffb7b3;
+    --qxCherry400: #ff8985;
+    --qxCherry500: #ff575c;
+    --qxCherry600: #e32b31;
+    --qxCherry700: #c61b2b;
+
+    /* ORANGE */
+    --qxPumpkin100: #fff8f0;
+    --qxPumpkin200: #fce9cf;
+    --qxPumpkin300: #f9c786;
+    --qxPumpkin400: #faac47;
+    --qxPumpkin500: #f2900d;
+    --qxPumpkin600: #d46e08;
+    --qxPumpkin700: #ab5907;
+
+    /* YELLOW */
+    --qxHoney100: #fffaeb;
+    --qxHoney200: #fff2cc;
+    --qxHoney300: #ffe9a8;
+    --qxHoney400: #fede81;
+    --qxHoney500: #fbd35b;
+    --qxHoney600: #ce9c04;
+    --qxHoney700: #a57d03;
+
+    /* GREEN */
+    --qxcado100: #ebfaf0;
+    --qxcado200: #d5f6dd;
+    --qxcado300: #b5edc7;
+    --qxcado400: #78dda2;
+    --qxcado500: #46ce7f;
+    --qxcado600: #1d875a;
+    --qxcado700: #267353;
+    --qxMint100: #e9fbfb;
+    --qxMint200: #d4f7f6;
+    --qxMint300: #9aeae9;
+    --qxMint400: #73dedc;
+    --qxMint500: #0ac2c0;
+    --qxMint600: #07a39f;
+    --qxMint700: #148190;
+
+    /* BLUE */
+    --qxCream100: #e9f6fb;
+    --qxCream200: #d1eefa;
+    --qxCream300: #97dcf7;
+    --qxCream400: #58cbf9;
+    --qxCream500: #00b8ff;
+    --qxCream600: #0ca4df;
+    --qxCream700: #127ca5;
+    --secondary100: #0b4fb1;
+    --secondary200: #0e4ca4;
+    --secondary300: #10448e;
+    --secondary400: #083677;
+    --secondary500: #052a5f;
+    --secondary600: #062147;
+    --secondary700: #001c43;
+    --primary100: #e8f2ff;
+    --primary200: #d6e8ff;
+    --primary300: #c0d9fb;
+    --primary400: #99c4ff;
+    --primary500: #056dff;
+    --primary600: #0064f0;
+    --primary700: #0a57c2;
+
+    /* PURPLE */
+    --qxBerry100: #eef1fc;
+    --qxBerry200: #b3c4fe;
+    --qxBerry300: #849cf0;
+    --qxBerry400: #6e8cf7;
+    --qxBerry500: #4b6de7;
+    --qxBerry600: #3053d5;
+    --qxBerry700: #30479c;
+    --qxGrape100: #f5f0fa;
+    --qxGrape200: #e5d4f7;
+    --qxGrape300: #ceb1f2;
+    --qxGrape400: #af7de8;
+    --qxGrape500: #9056dc;
+    --qxGrape600: #7a37d2;
+    --qxGrape700: #613f8d;
+
+    /* PINK */
+    --qxGuma100: #faf0f4;
+    --qxGuma200: #fad1e3;
+    --qxGuma300: #fbb6d4;
+    --qxGuma400: #fb8dbd;
+    --qxGuma500: #f6559b;
+    --qxGuma600: #dd3c82;
+    --qxGuma700: #99335f;
+
+    /* NEUTRAL */
+    --neutral100: #ffffff;
+    --neutral200: #f4f4f4;
+    --neutral300: #e3e3e3;
+    --neutral400: #c7c7c7;
+    --neutral500: #949494;
+    --neutral600: #767676;
+    --neutral700: #616161;
+}
