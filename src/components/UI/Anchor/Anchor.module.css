@@ -6,6 +6,10 @@
   padding: 0.5rem;
 }
 
+.anchor-link:hover {
+  text-decoration: underline;
+}
+
 .anchor--primary {
   color: var(--color-primary);
 }
@@ -15,8 +19,16 @@
   background-color: var(--color-primary);
 }
 
+.anchor--primary--solid:hover {
+  background-color: var(--color-primary-shade);
+}
+
 .anchor--primary--outline {
   border: 1px solid var(--color-primary);
+}
+
+.anchor--primary--outline:hover {
+  background-color: rgba(var(--color-primary-rgb), 0.2);
 }
 
 .anchor--secondary {
@@ -28,8 +40,16 @@
   background-color: var(--color-secondary);
 }
 
+.anchor--secondary--solid:hover {
+  background-color: var(--color-secondary-shade);
+}
+
 .anchor--secondary--outline {
   border: 1px solid var(--color-secondary);
+}
+
+.anchor--secondary--outline:hover {
+  background-color: rgba(var(--color-secondary-rgb), 0.2);
 }
 
 .anchor--neutral {
@@ -41,6 +61,14 @@
   background-color: var(--color-medium);
 }
 
+.anchor--neutral--solid:hover {
+  background-color: var(--color-medium-shade);
+}
+
 .anchor--neutral--outline {
   border: 1px solid var(--color-medium);
+}
+
+.anchor--neutral--outline:hover {
+  background-color: rgba(var(--color-medium-rgb), 0.2);
 }
