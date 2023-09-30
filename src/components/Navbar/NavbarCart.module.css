@@ -25,6 +25,6 @@
 }
 
 .cart__badge--color {
-  background-color: var(--primary700);
-  color: var(--neutral100);
+  background-color: var(--color-primary);
+  color: var(--color-primary-contrast);
 }

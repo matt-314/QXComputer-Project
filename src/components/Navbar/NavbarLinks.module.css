@@ -4,7 +4,7 @@
 }
 
 .pageLinks {
-  border-right: 1px solid var(--neutral700);
+  border-right: 1px solid var(--color-medium);
   display: flex;
   align-items: center;
 }
