@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import styles from './Anchor.module.css';
 
-function getClassName(color, fill) {
+function getClassName(color, fill, extraClassName) {
   const colorStyles = {
     primary: {
       color: styles['anchor--primary'],
@@ -32,7 +32,7 @@ function getClassName(color, fill) {
     },
   };
 
-  return `${styles.anchor} ${colorStyles[color].color} ${colorStyles[color].fill[fill]}`;
+  return `${styles.anchor} ${colorStyles[color].color} ${colorStyles[color].fill[fill]} ${extraClassName ?? ''}`;
 }
 
 function Anchor(
@@ -40,10 +40,11 @@ function Anchor(
     href,
     color,
     fill,
+    className,
     children,
   },
 ) {
-  const finalClassName = getClassName(color, fill);
+  const finalClassName = getClassName(color, fill, className);
 
   return (
     <a
@@ -59,6 +60,7 @@ Anchor.propTypes = {
   href: PropTypes.string.isRequired,
   color: PropTypes.oneOf(['primary', 'secondary', 'neutral']),
   fill: PropTypes.oneOf(['solid', 'outline', 'none']),
+  className: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.string,
@@ -68,6 +70,7 @@ Anchor.propTypes = {
 Anchor.defaultProps = {
   color: 'neutral',
   fill: 'none',
+  className: undefined,
   children: undefined,
 };
 
