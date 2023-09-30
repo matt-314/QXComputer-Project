@@ -11,7 +11,7 @@ function getClassName(color, fill, extraClassName) {
       fill: {
         solid: styles['anchor--primary--solid'],
         outline: styles['anchor--primary--outline'],
-        none: '',
+        none: styles['anchor-link'],
       },
     },
     secondary: {
@@ -19,7 +19,7 @@ function getClassName(color, fill, extraClassName) {
       fill: {
         solid: styles['anchor--secondary--solid'],
         outline: styles['anchor--secondary--outline'],
-        none: '',
+        none: styles['anchor-link'],
       },
     },
     neutral: {
@@ -27,7 +27,7 @@ function getClassName(color, fill, extraClassName) {
       fill: {
         solid: styles['anchor--neutral--solid'],
         outline: styles['anchor--neutral--outline'],
-        none: '',
+        none: styles['anchor-link'],
       },
     },
   };
