@@ -41,12 +41,12 @@
 	--color-danger-shade: #cf3c4f;
 	--color-danger-tint: #ed576b;
 
-	--color-medium: #92949c;
-	--color-medium-rgb: 146,148,156;
-	--color-medium-contrast: #000000;
-	--color-medium-contrast-rgb: 0,0,0;
-	--color-medium-shade: #808289;
-	--color-medium-tint: #9d9fa6;
+	--color-medium: #56575c;
+	--color-medium-rgb: 86,87,92;
+	--color-medium-contrast: #ffffff;
+	--color-medium-contrast-rgb: 255,255,255;
+	--color-medium-shade: #4c4d51;
+	--color-medium-tint: #67686c;
 
 	--color-light: #f4f5f8;
 	--color-light-rgb: 244,245,248;
