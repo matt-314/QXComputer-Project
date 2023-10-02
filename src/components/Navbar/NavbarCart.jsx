@@ -5,8 +5,8 @@ import styles from './NavbarCart.module.css';
 
 function NavbarCart({ cartItems }) {
   return (
-    <button type="button" className={styles.cart}>
-      <img className={styles.cart__image} src="/images/cart.svg" alt="Cart" />
+    <button type="button" className={styles.cart} aria-label={`Cart with ${cartItems} item`}>
+      <img className={styles.cart__image} src="/images/cart.svg" alt="" />
       <span className={`${styles.cart__badge} ${styles['cart__badge--color']}`}>{cartItems}</span>
     </button>
   );
