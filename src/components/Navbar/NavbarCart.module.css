@@ -1,6 +1,10 @@
 .cart {
   margin: 0 0.5rem;
   position: relative;
+  cursor: pointer;
+  appearance: none;
+  border: none;
+  background: none;
 }
 
 .cart__image {
