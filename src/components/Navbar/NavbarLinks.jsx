@@ -20,6 +20,7 @@ function NavbarLinks() {
             <Anchor
               href={href}
               key={href}
+              color="light"
             >
               {text}
             </Anchor>
