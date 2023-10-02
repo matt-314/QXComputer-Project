@@ -20,12 +20,12 @@
 	--color-tertiary-shade: #4854e0;
 	--color-tertiary-tint: #6370ff;
 
-	--color-success: #2dd36f;
-	--color-success-rgb: 45,211,111;
-	--color-success-contrast: #000000;
-	--color-success-contrast-rgb: 0,0,0;
-	--color-success-shade: #28ba62;
-	--color-success-tint: #42d77d;
+	--color-success: #1daa55;
+	--color-success-rgb: 29,170,85;
+	--color-success-contrast: #ffffff;
+	--color-success-contrast-rgb: 255,255,255;
+	--color-success-shade: #1a964b;
+	--color-success-tint: #34b366;
 
 	--color-warning: #ffc409;
 	--color-warning-rgb: 255,196,9;
