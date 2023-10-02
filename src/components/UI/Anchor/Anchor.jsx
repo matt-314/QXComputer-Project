@@ -6,33 +6,22 @@ import styles from './Anchor.module.css';
 
 function getClassName(color, fill, extraClassName) {
   const colorStyles = {
-    primary: {
-      color: styles['anchor--primary'],
-      fill: {
-        solid: styles['anchor--primary--solid'],
-        outline: styles['anchor--primary--outline'],
-        none: styles['anchor-link'],
-      },
-    },
-    secondary: {
-      color: styles['anchor--secondary'],
-      fill: {
-        solid: styles['anchor--secondary--solid'],
-        outline: styles['anchor--secondary--outline'],
-        none: styles['anchor-link'],
-      },
-    },
-    neutral: {
-      color: styles['anchor--neutral'],
-      fill: {
-        solid: styles['anchor--neutral--solid'],
-        outline: styles['anchor--neutral--outline'],
-        none: styles['anchor-link'],
-      },
-    },
+    primary: styles['anchor--primary'],
+    secondary: styles['anchor--secondary'],
+    tertiary: styles['anchor--tertiary'],
+    success: styles['anchor--success'],
+    danger: styles['anchor--danger'],
+    neutral: styles['anchor--neutral'],
+    light: styles['anchor--light'],
   };
 
-  return `${styles.anchor} ${colorStyles[color].color} ${colorStyles[color].fill[fill]} ${extraClassName ?? ''}`;
+  const fillStyles = {
+    solid: styles[`anchor--${color}--solid`],
+    outline: styles[`anchor--${color}--outline`],
+    none: styles['anchor-link'],
+  };
+
+  return `${styles.anchor} ${colorStyles[color]} ${fillStyles[fill]} ${extraClassName ?? ''}`;
 }
 
 function Anchor(
@@ -58,7 +47,7 @@ function Anchor(
 
 Anchor.propTypes = {
   href: PropTypes.string.isRequired,
-  color: PropTypes.oneOf(['primary', 'secondary', 'neutral']),
+  color: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'success', 'danger', 'neutral', 'light']),
   fill: PropTypes.oneOf(['solid', 'outline', 'none']),
   className: PropTypes.string,
   children: PropTypes.oneOfType([
