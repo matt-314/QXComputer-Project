@@ -3,6 +3,7 @@ import React from 'react';
 
 import AnchorTestPage from './_tests/AnchorTestPage';
 import ButtonTestPage from './_tests/ButtonTestPage';
+import CardTestPage from './_tests/Card/CardTestPage';
 
 import Main from './components/Main/Main';
 import Navbar from './components/Navbar/Navbar';
@@ -21,6 +22,12 @@ function getTestPage(testMode) {
       return (
         <main className={styles.contentPadding}>
           <ButtonTestPage />
+        </main>
+      );
+    case 'card':
+      return (
+        <main className={styles.contentPadding}>
+          <CardTestPage />
         </main>
       );
     default:
@@ -45,7 +52,7 @@ function App({ testMode }) {
 
 App.propTypes = {
   testMode: PropTypes.objectOf({
-    page: PropTypes.oneOf(['anchor', 'button']),
+    page: PropTypes.oneOf(['anchor', 'button', 'card']),
   }),
 };
 
