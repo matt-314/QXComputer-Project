@@ -12,12 +12,3 @@
 .pageLinks > a {
   margin: 0 0.75rem;
 }
-
-.accountLinks {
-  display: flex;
-  align-items: center;
-}
-
-.accountLinks > a {
-  margin: 0 0.25rem;
-}
