@@ -16,8 +16,8 @@ function getClassName(color, fill, extraClassName) {
   };
 
   const fillStyles = {
-    solid: styles[`anchor--${color}--solid`],
-    outline: styles[`anchor--${color}--outline`],
+    solid: `${styles[`anchor--${color}--solid`]} ${styles['anchor--button']}`,
+    outline: `${styles[`anchor--${color}--outline`]} ${styles['anchor--button']}`,
     none: styles['anchor-link'],
   };
 
