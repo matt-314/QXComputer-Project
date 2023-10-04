@@ -1,0 +1,16 @@
+.heading {
+  padding: var(--card-padding);
+}
+
+.heading__title {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+}
+
+.heading__subtitle {
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  color: var(--color-medium);
+}

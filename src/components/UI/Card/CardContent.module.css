@@ -1,0 +1,4 @@
+.content {
+  padding: 0.25rem var(--card-padding);
+  font-size: 0.75rem;
+}
