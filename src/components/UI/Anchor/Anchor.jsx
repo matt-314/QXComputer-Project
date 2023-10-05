@@ -4,36 +4,30 @@ import PropTypes from 'prop-types';
 
 import styles from './Anchor.module.css';
 
-function getClassName(color, fill, extraClassName) {
+function getClassName(color, extraClassName) {
   const colorStyles = {
     primary: styles['anchor--primary'],
     secondary: styles['anchor--secondary'],
     tertiary: styles['anchor--tertiary'],
     success: styles['anchor--success'],
     danger: styles['anchor--danger'],
+    warning: styles['anchor--warning'],
     neutral: styles['anchor--neutral'],
     light: styles['anchor--light'],
   };
 
-  const fillStyles = {
-    solid: `${styles[`anchor--${color}--solid`]} ${styles['anchor--button']}`,
-    outline: `${styles[`anchor--${color}--outline`]} ${styles['anchor--button']}`,
-    none: styles['anchor-link'],
-  };
-
-  return `${styles.anchor} ${colorStyles[color]} ${fillStyles[fill]} ${extraClassName ?? ''}`;
+  return `${styles.anchor} ${colorStyles[color]} ${extraClassName ?? ''}`;
 }
 
 function Anchor(
   {
     href,
     color,
-    fill,
     className,
     children,
   },
 ) {
-  const finalClassName = getClassName(color, fill, className);
+  const finalClassName = getClassName(color, className);
 
   return (
     <a
@@ -47,8 +41,7 @@ function Anchor(
 
 Anchor.propTypes = {
   href: PropTypes.string.isRequired,
-  color: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'success', 'danger', 'neutral', 'light']),
-  fill: PropTypes.oneOf(['solid', 'outline', 'none']),
+  color: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'success', 'danger', 'warning', 'neutral', 'light']),
   className: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.node,
@@ -58,7 +51,6 @@ Anchor.propTypes = {
 
 Anchor.defaultProps = {
   color: 'neutral',
-  fill: 'none',
   className: undefined,
   children: undefined,
 };

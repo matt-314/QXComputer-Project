@@ -30,19 +30,28 @@ function Button({
   size,
   shape,
   onClick,
+  href,
 }) {
   const finalClassName = getButtonClassName({
     extraClassName: className, color, fill, size, shape,
   });
-  return (
-    <button
-      type={type === 'button' ? 'button' : 'submit'}
-      className={finalClassName}
-      onClick={onClick}
-    >
-      {children}
-    </button>
-  );
+  return href
+    ? (
+      <a
+        href={href}
+        className={finalClassName}
+      >
+        {children}
+      </a>
+    ) : (
+      <button
+        type={type === 'button' ? 'button' : 'submit'}
+        className={finalClassName}
+        onClick={onClick}
+      >
+        {children}
+      </button>
+    );
 }
 
 Button.propTypes = {
@@ -54,6 +63,7 @@ Button.propTypes = {
   size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
   shape: PropTypes.oneOf(['default', 'square', 'round']),
   onClick: PropTypes.func,
+  href: PropTypes.string,
 };
 
 Button.defaultProps = {
@@ -64,6 +74,7 @@ Button.defaultProps = {
   size: 'md',
   shape: 'default',
   onClick: undefined,
+  href: undefined,
 };
 
 export default Button;

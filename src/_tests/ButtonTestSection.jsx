@@ -6,77 +6,140 @@ import Button from '../components/UI/Button/Button';
 import styles from './ButtonTestSection.module.css';
 
 function ButtonTestSection({ title, color }) {
+  const buttonsAttributes = [
+    { size: 'xs', shape: 'default' },
+    { size: 'sm', shape: 'default' },
+    { size: 'md', shape: 'default' },
+    { size: 'lg', shape: 'default' },
+    { size: 'xs', shape: 'round' },
+    { size: 'sm', shape: 'round' },
+    { size: 'md', shape: 'round' },
+    { size: 'lg', shape: 'round' },
+    { size: 'xs', shape: 'square' },
+    { size: 'sm', shape: 'square' },
+    { size: 'md', shape: 'square' },
+    { size: 'lg', shape: 'square' },
+  ];
+
+  const anchorButtonsAttributes = [
+    { size: 'xs', shape: 'default' },
+    { size: 'sm', shape: 'default' },
+    { size: 'md', shape: 'default' },
+    { size: 'lg', shape: 'default' },
+    { size: 'xs', shape: 'round' },
+    { size: 'sm', shape: 'round' },
+    { size: 'md', shape: 'round' },
+    { size: 'lg', shape: 'round' },
+    { size: 'xs', shape: 'square' },
+    { size: 'sm', shape: 'square' },
+    { size: 'md', shape: 'square' },
+    { size: 'lg', shape: 'square' },
+  ];
+
   return (
     <section className={`${styles.section} ${styles[`section--background--contrast--${color}`]}`}>
       <h2 className={styles[`title--color--${color}`]}>{title}</h2>
       <div className={styles.subsection}>
-        <span className={styles[`title--color--${color}`]}>Solid</span>
-        <Button className={styles.button} size="xs" color={color}>
-          Button
-        </Button>
-        <Button className={styles.button} size="sm" color={color}>
-          Button
-        </Button>
-        <Button className={styles.button} size="md" color={color}>
-          Button
-        </Button>
-        <Button className={styles.button} size="lg" color={color}>
-          Button
-        </Button>
-        <Button className={styles.button} size="xs" color={color} shape="round">
-          Button
-        </Button>
-        <Button className={styles.button} size="sm" color={color} shape="round">
-          Button
-        </Button>
-        <Button className={styles.button} size="md" color={color} shape="round">
-          Button
-        </Button>
-        <Button className={styles.button} size="lg" color={color} shape="round">
-          Button
-        </Button>
-        <Button className={styles.button} size="xs" color={color} shape="square">
-          Button
-        </Button>
-        <Button className={styles.button} size="sm" color={color} shape="square">
-          Button
-        </Button>
-        <Button className={styles.button} size="md" color={color} shape="square">
-          Button
-        </Button>
-        <Button className={styles.button} size="lg" color={color} shape="square">
-          Button
-        </Button>
+        <div className={styles[`title--color--${color}`]}>Solid</div>
+        <div>
+          <div>
+            {buttonsAttributes.map((buttonAttributes) => (
+              <Button
+                className={styles.button}
+                fill="solid"
+                size={buttonAttributes.size}
+                color={color}
+                shape={buttonAttributes.shape}
+                key={`${buttonAttributes.size}-${buttonAttributes.shape}`}
+              >
+                Button
+              </Button>
+            ))}
+          </div>
+          <div>
+            {anchorButtonsAttributes.map((buttonAttributes) => (
+              <Button
+                className={styles.button}
+                fill="solid"
+                size={buttonAttributes.size}
+                color={color}
+                shape={buttonAttributes.shape}
+                href="#"
+                key={`${buttonAttributes.size}-${buttonAttributes.shape}`}
+              >
+                Anchor
+              </Button>
+            ))}
+          </div>
+        </div>
       </div>
       <div className={styles.subsection}>
-        <span className={styles[`title--color--${color}`]}>Outline</span>
-        <Button className={styles.button} size="xs" color={color} fill="outline">
-          Button
-        </Button>
-        <Button className={styles.button} size="sm" color={color} fill="outline">
-          Button
-        </Button>
-        <Button className={styles.button} size="md" color={color} fill="outline">
-          Button
-        </Button>
-        <Button className={styles.button} size="lg" color={color} fill="outline">
-          Button
-        </Button>
+        <div className={styles[`title--color--${color}`]}>Outline</div>
+        <div>
+          <div>
+            {buttonsAttributes.map((buttonAttributes) => (
+              <Button
+                className={styles.button}
+                fill="outline"
+                size={buttonAttributes.size}
+                color={color}
+                shape={buttonAttributes.shape}
+                key={`${buttonAttributes.size}-${buttonAttributes.shape}`}
+              >
+                Button
+              </Button>
+            ))}
+          </div>
+          <div>
+            {anchorButtonsAttributes.map((buttonAttributes) => (
+              <Button
+                className={styles.button}
+                fill="outline"
+                size={buttonAttributes.size}
+                color={color}
+                shape={buttonAttributes.shape}
+                href="#"
+                key={`${buttonAttributes.size}-${buttonAttributes.shape}`}
+              >
+                Anchor
+              </Button>
+            ))}
+          </div>
+        </div>
       </div>
       <div className={styles.subsection}>
-        <span className={styles[`title--color--${color}`]}>Ghost</span>
-        <Button className={styles.button} size="xs" color={color} fill="ghost">
-          Button
-        </Button>
-        <Button className={styles.button} size="sm" color={color} fill="ghost">
-          Button
-        </Button>
-        <Button className={styles.button} size="md" color={color} fill="ghost">
-          Button
-        </Button>
-        <Button className={styles.button} size="lg" color={color} fill="ghost">
-          Button
-        </Button>
+        <div className={styles[`title--color--${color}`]}>Ghost</div>
+        <div>
+          <div>
+            {buttonsAttributes.map((buttonAttributes) => (
+              <Button
+                className={styles.button}
+                fill="ghost"
+                size={buttonAttributes.size}
+                color={color}
+                shape={buttonAttributes.shape}
+                key={`${buttonAttributes.size}-${buttonAttributes.shape}`}
+              >
+                Button
+              </Button>
+            ))}
+          </div>
+          <div>
+            {anchorButtonsAttributes.map((buttonAttributes) => (
+              <Button
+                className={styles.button}
+                fill="ghost"
+                size={buttonAttributes.size}
+                color={color}
+                shape={buttonAttributes.shape}
+                href="#"
+                key={`${buttonAttributes.size}-${buttonAttributes.shape}`}
+              >
+                Anchor
+              </Button>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
