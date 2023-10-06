@@ -9,6 +9,7 @@
 
 .cart__image {
   width: 1.5rem;
+  fill: var(--color-primary-contrast)
 }
 
 .cart__badge {
@@ -22,9 +23,9 @@
   font-size: 0.75rem;
   font-weight: bold;
   position: absolute;
-  left: 20px;
+  left: 27px;
   right: 0px;
-  bottom: 20px;
+  bottom: 25px;
   z-index: 100;
 }
 
