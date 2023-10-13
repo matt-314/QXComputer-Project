@@ -1,7 +1,7 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 
 import Navbar from '../../components/Navbar/Navbar';
-import Home from './home/Home';
 
 import styles from './App.module.css';
 
@@ -12,7 +12,7 @@ function App() {
         <Navbar />
       </header>
       <main className={styles.contentPadding}>
-        <Home />
+        <Outlet />
       </main>
     </>
   );
