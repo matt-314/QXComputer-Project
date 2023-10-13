@@ -1,16 +1,16 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import CartIcon from '../../assets/icons/CartIcon';
+import Button from '../UI/Button/Button';
 
 import styles from './NavbarCart.module.css';
 
 function NavbarCart({ cartItems }) {
   return (
-    <button type="button" className={styles.cart} aria-label={`Cart with ${cartItems} item`}>
-      <CartIcon color="primary" height={28} contrast />
+    <>
+      <Button icon="cart" size="md" color="primary" contrast iconOnly>Cart</Button>
       <span className={`${styles.cart__badge} ${styles['cart__badge--color']}`}>{cartItems}</span>
-    </button>
+    </>
   );
 }
 
