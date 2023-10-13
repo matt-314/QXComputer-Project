@@ -9,6 +9,7 @@
         "sourceType": "module"
     },
     "rules": {
-        "import/no-extraneous-dependecies": "off"
+        "import/no-extraneous-dependecies": "off",
+        "max-len": "off"
     }
 }
