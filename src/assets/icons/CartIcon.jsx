@@ -1,10 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import styles from './CartIcon.module.css';
-
 function CartIcon({
-  color, contrast, width, height,
+  width, height, className,
 }) {
   let fixedWidth = 32;
   let fixedHeight = 32;
@@ -18,7 +16,7 @@ function CartIcon({
   }
 
   return (
-    <svg className={styles[`cartIcon--${color}${contrast ? '--contrast' : ''}`]} version="1.1" xmlns="http://www.w3.org/2000/svg" width={fixedWidth} height={fixedHeight} viewBox="0 0 32 32">
+    <svg className={className} version="1.1" xmlns="http://www.w3.org/2000/svg" width={fixedWidth} height={fixedHeight} viewBox="0 0 32 32">
       <title>cart</title>
       <path d="M12 29c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3z" />
       <path d="M32 29c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3z" />
@@ -28,17 +26,15 @@ function CartIcon({
 }
 
 CartIcon.propTypes = {
-  color: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'success', 'danger', 'warning', 'neutral', 'light']),
-  contrast: PropTypes.bool,
   width: PropTypes.number,
   height: PropTypes.number,
+  className: PropTypes.string,
 };
 
 CartIcon.defaultProps = {
-  color: 'primary',
-  contrast: false,
   width: undefined,
   height: undefined,
+  className: undefined,
 };
 
 export default CartIcon;

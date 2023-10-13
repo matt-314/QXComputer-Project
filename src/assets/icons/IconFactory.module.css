@@ -1,63 +1,63 @@
-.cartIcon--primary {
+.iconFactory--primary {
   fill: var(--color-primary);
 }
 
-.cartIcon--primary--contrast {
+.iconFactory--primary--contrast {
   fill: var(--color-primary-contrast);
 }
 
-.cartIcon--secondary {
+.iconFactory--secondary {
   fill: var(--color-secondary);
 }
 
-.cartIcon--secondary--contrast {
+.iconFactory--secondary--contrast {
   fill: var(--color-secondary-contrast);
 }
 
-.cartIcon--tertiary {
+.iconFactory--tertiary {
   fill: var(--color-tertiary);
 }
 
-.cartIcon--tertiary--contrast {
+.iconFactory--tertiary--contrast {
   fill: var(--color-tertiary-contrast);
 }
 
-.cartIcon--success {
+.iconFactory--success {
   fill: var(--color-success);
 }
 
-.cartIcon--success--contrast {
+.iconFactory--success--contrast {
   fill: var(--color-success-contrast);
 }
 
-.cartIcon--danger {
+.iconFactory--danger {
   fill: var(--color-danger);
 }
 
-.cartIcon--danger--contrast {
+.iconFactory--danger--contrast {
   fill: var(--color-danger-contrast);
 }
 
-.cartIcon--warning {
+.iconFactory--warning {
   fill: var(--color-warning);
 }
 
-.cartIcon--warning--contrast {
+.iconFactory--warning--contrast {
   fill: var(--color-warning-contrast);
 }
 
-.cartIcon--neutral {
+.iconFactory--neutral {
   fill: var(--color-medium);
 }
 
-.cartIcon--neutral--contrast {
+.iconFactory--neutral--contrast {
   fill: var(--color-medium-contrast);
 }
 
-.cartIcon--light {
+.iconFactory--light {
   fill: var(--color-light);
 }
 
-.cartIcon--light--contrast {
+.iconFactory--light--contrast {
   fill: var(--color-light-contrast);
 }
