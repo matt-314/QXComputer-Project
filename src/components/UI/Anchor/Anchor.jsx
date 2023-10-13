@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import PropTypes from 'prop-types';
 
@@ -30,12 +31,12 @@ function Anchor(
   const finalClassName = getClassName(color, className);
 
   return (
-    <a
-      href={href}
+    <Link
+      to={href}
       className={finalClassName}
     >
       {children}
-    </a>
+    </Link>
   );
 }
 
