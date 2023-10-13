@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import Anchor from '../../components/UI/Anchor/Anchor';
-import Card from '../../components/UI/Card/Card';
+import Anchor from '../../../components/UI/Anchor/Anchor';
+import Card from '../../../components/UI/Card/Card';
 
 import styles from './CardTestPage.module.css';
 

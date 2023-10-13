@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import AnchorTestPage from './_tests/AnchorTestPage';
-import ButtonTestPage from './_tests/ButtonTestPage';
-import CardTestPage from './_tests/Card/CardTestPage';
+import AnchorTestPage from './pages/_tests/Anchor/AnchorTestPage';
+import ButtonTestPage from './pages/_tests/Button/ButtonTestPage';
+import CardTestPage from './pages/_tests/Card/CardTestPage';
 
-import Main from './components/Main/Main';
 import Navbar from './components/Navbar/Navbar';
+import Home from './pages/home/Home';
 
 import styles from './App.module.css';
 
@@ -44,7 +44,7 @@ function App({ testMode }) {
           <Navbar />
         </header>
         <main className={styles.contentPadding}>
-          <Main />
+          <Home />
         </main>
       </>
     );

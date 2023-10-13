@@ -3,10 +3,10 @@ import { createBrowserRouter } from 'react-router-dom';
 
 import App from '../App';
 
-import AnchorTestPage from '../_tests/AnchorTestPage';
-import ButtonTestPage from '../_tests/ButtonTestPage';
-import CardTestPage from '../_tests/Card/CardTestPage';
-import TestPage from '../_tests/TestPage';
+import AnchorTestPage from '../pages/_tests/Anchor/AnchorTestPage';
+import ButtonTestPage from '../pages/_tests/Button/ButtonTestPage';
+import CardTestPage from '../pages/_tests/Card/CardTestPage';
+import TestPage from '../pages/_tests/TestPage';
 
 export default function getBrowerRouter() {
   return createBrowserRouter([

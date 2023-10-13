@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Button from '../components/UI/Button/Button';
+import Button from '../../../components/UI/Button/Button';
 
 import styles from './ButtonTestSection.module.css';
 
@@ -41,6 +41,23 @@ function ButtonTestSection({ title, color }) {
     { size: 'lg', shape: 'square' },
     { size: 'xl', shape: 'square' },
   ];
+
+  const iconButtonsAttributes = [
+    { size: 'xs', shape: 'default', icon: 'kebab' },
+    { size: 'sm', shae: 'default', icon: 'kebab' },
+    { size: 'md', shape: 'default', icon: 'kebab' },
+    { size: 'lg', shape: 'default', icon: 'kebab' },
+    { size: 'xl', shape: 'default', icon: 'kebab' },
+    { size: 'xs', shape: 'round', icon: 'kebab' },
+    { size: 'sm', shape: 'round', icon: 'kebab' },
+    { size: 'md', shape: 'round', icon: 'kebab' },
+    { size: 'lg', shape: 'round', icon: 'kebab' },
+    { size: 'xl', shape: 'round', icon: 'kebab' },
+    { size: 'xs', shape: 'square', icon: 'kebab' },
+    { size: 'sm', shape: 'square', icon: 'kebab' },
+    { size: 'md', shape: 'square', icon: 'kebab' },
+    { size: 'lg', shape: 'square', icon: 'kebab' },
+    { size: 'xl', shape: 'square', icon: 'kebab' },
   ];
 
   return (
@@ -140,6 +157,27 @@ function ButtonTestSection({ title, color }) {
                 color={color}
                 shape={buttonAttributes.shape}
                 href="#"
+                key={`${buttonAttributes.size}-${buttonAttributes.shape}`}
+              >
+                Anchor
+              </Button>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className={styles.subsection}>
+        <div className={styles[`title--color--${color}`]}>Icons</div>
+        <div>
+          <div>
+            {iconButtonsAttributes.map((buttonAttributes) => (
+              <Button
+                className={styles.button}
+                fill="outline"
+                size={buttonAttributes.size}
+                icon={buttonAttributes.icon}
+                iconOnly
+                color={color}
+                shape={buttonAttributes.shape}
                 key={`${buttonAttributes.size}-${buttonAttributes.shape}`}
               >
                 Anchor

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Anchor from '../components/UI/Anchor/Anchor';
+import Anchor from '../../../components/UI/Anchor/Anchor';
 
 import styles from './AnchorTestPage.module.css';
 
