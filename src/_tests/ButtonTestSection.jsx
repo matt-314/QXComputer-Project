@@ -11,14 +11,17 @@ function ButtonTestSection({ title, color }) {
     { size: 'sm', shape: 'default' },
     { size: 'md', shape: 'default' },
     { size: 'lg', shape: 'default' },
+    { size: 'xl', shape: 'default' },
     { size: 'xs', shape: 'round' },
     { size: 'sm', shape: 'round' },
     { size: 'md', shape: 'round' },
     { size: 'lg', shape: 'round' },
+    { size: 'xl', shape: 'round' },
     { size: 'xs', shape: 'square' },
     { size: 'sm', shape: 'square' },
     { size: 'md', shape: 'square' },
     { size: 'lg', shape: 'square' },
+    { size: 'xl', shape: 'square' },
   ];
 
   const anchorButtonsAttributes = [
@@ -26,14 +29,18 @@ function ButtonTestSection({ title, color }) {
     { size: 'sm', shape: 'default' },
     { size: 'md', shape: 'default' },
     { size: 'lg', shape: 'default' },
+    { size: 'xl', shape: 'default' },
     { size: 'xs', shape: 'round' },
     { size: 'sm', shape: 'round' },
     { size: 'md', shape: 'round' },
     { size: 'lg', shape: 'round' },
+    { size: 'xl', shape: 'round' },
     { size: 'xs', shape: 'square' },
     { size: 'sm', shape: 'square' },
     { size: 'md', shape: 'square' },
     { size: 'lg', shape: 'square' },
+    { size: 'xl', shape: 'square' },
+  ];
   ];
 
   return (
