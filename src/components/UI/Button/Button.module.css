@@ -1,9 +1,23 @@
 .button {
+  --height-xs: 22px;
+  --height-sm: 28px;
+  --height-md: 34px;
+  --height-lg: 40px;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.75rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1rem;
   border: none;
   appearance: unset;
   padding: 0 0.75rem;
   box-sizing: border-box;
   font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+}
+
+svg + .button__text {
+  margin-left: 0.5rem;
 }
 
 a.button {
@@ -23,42 +37,26 @@ a.button {
 */
 /* XS */
 .button--xs {
-  height: 22px;
-  font-size: 0.75rem;
-}
-
-.button--xs--rounded {
-  border-radius: 0.25rem;
+  height: var(--height-xs);
+  font-size: var(--font-size-xs);
 }
 
 /* SM */
 .button--sm {
-  height: 28px;
-  font-size: 0.75rem;
-}
-
-.button--sm--rounded {
-  border-radius: 0.25rem;
+  height: var(--height-sm);
+  font-size: var(--font-size-sm);
 }
 
 /* MD */
 .button--md {
-  height: 34px;
-  font-size: 1rem;
-}
-
-.button--md--rounded {
-  border-radius: 0.5rem;
+  height: var(--height-md);
+  font-size: var(--font-size-md);
 }
 
 /* LG */
 .button--lg {
-  height: 40px;
-  font-size: 1rem;
-}
-
-.button--lg--rounded {
-  border-radius: 0.5rem;
+  height: var(--height-lg);
+  font-size: var(--font-size-lg);
 }
 
 /*
@@ -71,8 +69,20 @@ a.button {
   border-radius: 0.25rem;
 }
 
-.button--shape--round{
-  border-radius: 50%;
+.button--shape--round--xs{
+  border-radius: calc(var(--height-xs) / 2);
+}
+
+.button--shape--round--sm{
+  border-radius: calc(var(--height-sm) / 2);
+}
+
+.button--shape--round--md{
+  border-radius: calc(var(--height-md) / 2);
+}
+
+.button--shape--round--lg{
+  border-radius: calc(var(--height-lg) / 2);
 }
 
 .button--shape-square {

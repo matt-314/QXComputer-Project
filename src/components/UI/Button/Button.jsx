@@ -1,7 +1,22 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import IconFactory from '../../../assets/icons/IconFactory';
+
 import styles from './Button.module.css';
+
+function getIconFactory({
+  icon, color, size, fill,
+}) {
+  return (
+    <IconFactory
+      icon={icon}
+      color={color}
+      height={['xs', 'sm'].includes(size) ? 12 : 16}
+      contrast={fill === 'solid'}
+    />
+  );
+}
 
 function getButtonClassName({
   extraClassName, size, color, fill, shape,
@@ -15,10 +30,34 @@ function getButtonClassName({
   const shapes = {
     default: styles['button--shape--default'],
     square: styles['button--shape--square'],
-    round: styles['button--shape--round'],
+    round: styles[`button--shape--round--${size}`],
   };
 
   return `${styles.button} ${styles[`button--${size}`]} ${shapes[shape]} ${fills[fill]} ${extraClassName ?? ''}`;
+}
+
+function getAnchorOrButton({
+  href, onClick, type, className, ariaLabel, children,
+}) {
+  return href
+    ? (
+      <a
+        href={href}
+        className={className}
+        aria-label={ariaLabel}
+      >
+        {children}
+      </a>
+    ) : (
+      <button
+        type={type === 'button' ? 'button' : 'submit'}
+        className={className}
+        aria-label={ariaLabel}
+        onClick={onClick}
+      >
+        {children}
+      </button>
+    );
 }
 
 function Button({
@@ -29,29 +68,37 @@ function Button({
   fill,
   size,
   shape,
+  icon,
+  iconOnly,
   onClick,
   href,
 }) {
   const finalClassName = getButtonClassName({
     extraClassName: className, color, fill, size, shape,
   });
-  return href
-    ? (
-      <a
-        href={href}
-        className={finalClassName}
-      >
-        {children}
-      </a>
-    ) : (
-      <button
-        type={type === 'button' ? 'button' : 'submit'}
-        className={finalClassName}
-        onClick={onClick}
-      >
-        {children}
-      </button>
-    );
+  const content = (
+    <>
+      {icon && getIconFactory({
+        icon, color, size, fill,
+      })}
+      {
+        !iconOnly ? (
+          <span className={styles.button__text}>
+            {children}
+          </span>
+        ) : undefined
+      }
+    </>
+  );
+
+  return getAnchorOrButton({
+    href,
+    onClick,
+    type,
+    className: finalClassName,
+    ariaLabel: iconOnly ? children : undefined,
+    children: content,
+  });
 }
 
 Button.propTypes = {
@@ -62,6 +109,8 @@ Button.propTypes = {
   fill: PropTypes.oneOf(['solid', 'outline', 'ghost']),
   size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
   shape: PropTypes.oneOf(['default', 'square', 'round']),
+  icon: PropTypes.string,
+  iconOnly: PropTypes.bool,
   onClick: PropTypes.func,
   href: PropTypes.string,
 };
@@ -73,6 +122,8 @@ Button.defaultProps = {
   fill: 'solid',
   size: 'md',
   shape: 'default',
+  icon: undefined,
+  iconOnly: false,
   onClick: undefined,
   href: undefined,
 };
