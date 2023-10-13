@@ -1,3 +1,7 @@
+.title__anchor:hover {
+  text-decoration: none;
+}
+
 .title {
   font-family: 'TechnoHideo';
   color: var(--color-primary-contrast);
