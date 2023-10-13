@@ -8,10 +8,10 @@ import styles from './App.module.css';
 function App() {
   return (
     <>
-      <header className={`${styles.contentPadding} ${styles.header}`}>
+      <header className={styles.header}>
         <Navbar />
       </header>
-      <main className={styles.contentPadding}>
+      <main>
         <Outlet />
       </main>
     </>
