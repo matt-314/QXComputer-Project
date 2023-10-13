@@ -8,11 +8,19 @@ import styles from './Button.module.css';
 function getIconFactory({
   icon, color, size, fill,
 }) {
+  const iconSizes = {
+    xs: 12,
+    sm: 12,
+    md: 16,
+    lg: 24,
+    xl: 32,
+  };
+
   return (
     <IconFactory
       icon={icon}
       color={color}
-      height={['xs', 'sm'].includes(size) ? 12 : 16}
+      height={iconSizes[size]}
       contrast={fill === 'solid'}
     />
   );
@@ -107,7 +115,7 @@ Button.propTypes = {
   color: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'success', 'danger', 'warning', 'neutral', 'light']),
   type: PropTypes.oneOf(['button', 'submit']),
   fill: PropTypes.oneOf(['solid', 'outline', 'ghost']),
-  size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
+  size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'xl']),
   shape: PropTypes.oneOf(['default', 'square', 'round']),
   icon: PropTypes.string,
   iconOnly: PropTypes.bool,

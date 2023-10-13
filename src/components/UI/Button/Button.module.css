@@ -1,12 +1,14 @@
 .button {
-  --height-xs: 22px;
+  --height-xs: 24px;
   --height-sm: 28px;
   --height-md: 34px;
-  --height-lg: 40px;
+  --height-lg: 44px;
+  --height-xl: 54px;
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.75rem;
   --font-size-md: 1rem;
-  --font-size-lg: 1rem;
+  --font-size-lg: 1.5rem;
+  --font-size-xl: 2rem;
   border: none;
   appearance: unset;
   padding: 0 0.75rem;
@@ -59,6 +61,12 @@ a.button {
   font-size: var(--font-size-lg);
 }
 
+/* XL */
+.button--xl {
+  height: var(--height-xl);
+  font-size: var(--font-size-xl);
+}
+
 /*
   ==============
   Button Shapes
@@ -83,6 +91,10 @@ a.button {
 
 .button--shape--round--lg{
   border-radius: calc(var(--height-lg) / 2);
+}
+
+.button--shape--round--xl{
+  border-radius: calc(var(--height-xl) / 2);
 }
 
 .button--shape-square {
