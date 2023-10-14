@@ -26,7 +26,7 @@ function CardActions({ actions }) {
 
 CardActions.propTypes = {
   actions: PropTypes.arrayOf(
-    PropTypes.objectOf({
+    PropTypes.shape({
       text: PropTypes.string,
       color: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'success', 'danger', 'warning', 'neutral', 'light']),
       fill: PropTypes.oneOf(['solid', 'outline', 'ghost']),

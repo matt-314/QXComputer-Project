@@ -42,7 +42,7 @@ Card.propTypes = {
   headingLevel: PropTypes.number,
   thumbnail: PropTypes.string,
   actions: PropTypes.arrayOf(
-    PropTypes.objectOf({
+    PropTypes.shape({
       text: PropTypes.string,
       color: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'success', 'danger', 'warning', 'neutral', 'light']),
       fill: PropTypes.oneOf(['solid', 'outline', 'ghost']),
