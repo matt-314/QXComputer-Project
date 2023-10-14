@@ -82,14 +82,18 @@ function CardTestPage() {
         <div className={styles.section}>
           <Card
             title="Tree"
-            thumbnail="https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?cs=srgb&dl=pexels-pixabay-36717.jpg&fm=jpg"
+            thumbnail={{
+              url: 'https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?cs=srgb&dl=pexels-pixabay-36717.jpg&fm=jpg',
+            }}
             className={styles.card}
           >
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut quasi, deserunt</p>
           </Card>
           <Card
             title="Lion"
-            thumbnail="https://i.pinimg.com/originals/88/c7/2d/88c72df090dabb6cd960d13a12e38071.jpg"
+            thumbnail={{
+              url: 'https://i.pinimg.com/originals/88/c7/2d/88c72df090dabb6cd960d13a12e38071.jpg',
+            }}
             actions={[
               {
                 text: 'Action 1',
