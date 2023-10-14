@@ -3,14 +3,15 @@ import React from 'react';
 
 import styles from './CardThumbnail.module.css';
 
-function CardThumbnail({ thumbnailUrl }) {
+function CardThumbnail({ thumbnailUrl, backgroundCoverMode }) {
   return (
     <div
       className={styles.thumbnail}
       style={{
         backgroundImage: `url(${thumbnailUrl})`,
         backgroundPosition: 'center',
-        backgroundSize: 'cover',
+        backgroundSize: backgroundCoverMode,
+        backgroundRepeat: 'no-repeat',
       }}
     />
   );
@@ -18,6 +19,11 @@ function CardThumbnail({ thumbnailUrl }) {
 
 CardThumbnail.propTypes = {
   thumbnailUrl: PropTypes.string.isRequired,
+  backgroundCoverMode: PropTypes.oneOf(['cover', 'auto']),
+};
+
+CardThumbnail.defaultProps = {
+  backgroundCoverMode: 'cover',
 };
 
 export default CardThumbnail;

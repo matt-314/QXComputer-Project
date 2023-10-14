@@ -13,7 +13,7 @@ function Card({
 }) {
   return (
     <article className={`${styles.card} ${className}`}>
-      {thumbnail && <CardThumbnail thumbnailUrl={thumbnail} />}
+      {thumbnail && <CardThumbnail thumbnailUrl={thumbnail.url} backgroundCoverMode={thumbnail.backgroundCoverMode} />}
       <CardHeading title={title} subtitle={subtitle} headingLevel={headingLevel} />
       {
         children && (
@@ -40,7 +40,10 @@ Card.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string,
   headingLevel: PropTypes.number,
-  thumbnail: PropTypes.string,
+  thumbnail: PropTypes.shape({
+    url: PropTypes.string,
+    backgroundCoverMode: PropTypes.oneOf(['cover', 'auto']),
+  }),
   actions: PropTypes.arrayOf(
     PropTypes.shape({
       text: PropTypes.string,
