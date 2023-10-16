@@ -6,13 +6,13 @@ import styles from './CardHeading.module.css';
 function getHeaderLevel(title, level = 2) {
   switch (level) {
     case 2:
-      return <h2 className={styles.heading__title}>{title}</h2>;
+      return <h2 className={styles.heading__title} title={title}>{title}</h2>;
     case 3:
-      return <h3 className={styles.heading__title}>{title}</h3>;
+      return <h3 className={styles.heading__title} title={title}>{title}</h3>;
     case 4:
-      return <h4 className={styles.heading__title}>{title}</h4>;
+      return <h4 className={styles.heading__title} title={title}>{title}</h4>;
     case 5:
-      return <h5 className={styles.heading__title}>{title}</h5>;
+      return <h5 className={styles.heading__title} title={title}>{title}</h5>;
     default:
       throw new Error('Invalid header level');
   }
