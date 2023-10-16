@@ -1,5 +1,10 @@
 .heading {
   padding: var(--card-padding);
+  min-height: 4rem;
+  max-height: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
 }
 
 .heading__title {
