@@ -19,7 +19,7 @@ function CardThumbnail({ thumbnailUrl, backgroundCoverMode }) {
 
 CardThumbnail.propTypes = {
   thumbnailUrl: PropTypes.string.isRequired,
-  backgroundCoverMode: PropTypes.oneOf(['cover', 'auto']),
+  backgroundCoverMode: PropTypes.oneOf(['cover', 'contain', 'auto']),
 };
 
 CardThumbnail.defaultProps = {

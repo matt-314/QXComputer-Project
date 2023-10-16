@@ -42,7 +42,7 @@ Card.propTypes = {
   headingLevel: PropTypes.number,
   thumbnail: PropTypes.shape({
     url: PropTypes.string,
-    backgroundCoverMode: PropTypes.oneOf(['cover', 'auto']),
+    backgroundCoverMode: PropTypes.oneOf(['cover', 'contain', 'auto']),
   }),
   actions: PropTypes.arrayOf(
     PropTypes.shape({
