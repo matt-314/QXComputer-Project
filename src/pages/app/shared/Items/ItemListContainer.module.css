@@ -1,0 +1,30 @@
+:root {
+  --itemListContainer-item-height: 625px;
+  --itemListContainer-item-padding: 0.5rem;
+}
+
+.itemList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-height: calc(var(--itemListContainer-item-height) + 2 * var(--itemListContainer-item-padding));
+  padding: 0 var(--itemListContainer-item-padding);
+  overflow: auto;
+}
+
+.itemList__item {
+  width: 30%;
+  margin: 0.75rem;
+}
+
+@media (max-width: 1125px) {
+  .itemList__item {
+    width: 48%;
+  }
+}
+
+@media (max-width: 768px) {
+  .itemList__item {
+    width: 75%;
+  }
+}
