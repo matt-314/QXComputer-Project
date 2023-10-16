@@ -49,6 +49,7 @@ Card.propTypes = {
       text: PropTypes.string,
       color: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'success', 'danger', 'warning', 'neutral', 'light']),
       fill: PropTypes.oneOf(['solid', 'outline', 'ghost']),
+      href: PropTypes.string,
       callback: PropTypes.func,
     }),
   ),

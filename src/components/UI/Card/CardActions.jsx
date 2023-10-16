@@ -14,6 +14,7 @@ function CardActions({ actions }) {
           color={action.color}
           fill={action.fill}
           size="sm"
+          href={action.href}
           onClick={action.callback}
           className={styles.actions__item}
         >
@@ -30,6 +31,7 @@ CardActions.propTypes = {
       text: PropTypes.string,
       color: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'success', 'danger', 'warning', 'neutral', 'light']),
       fill: PropTypes.oneOf(['solid', 'outline', 'ghost']),
+      href: PropTypes.string,
       callback: PropTypes.func,
     }),
   ).isRequired,
