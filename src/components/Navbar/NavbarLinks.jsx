@@ -7,9 +7,9 @@ import styles from './NavbarLinks.module.css';
 
 function NavbarLinks() {
   const pageLinks = [
-    { href: '#components', text: 'Components' },
-    { href: '#laptops', text: 'Laptops' },
-    { href: '#desktops', text: 'Desktops' },
+    { href: 'components', text: 'Components' },
+    { href: 'laptops', text: 'Laptops' },
+    { href: 'desktops', text: 'Desktops' },
   ];
 
   return (
