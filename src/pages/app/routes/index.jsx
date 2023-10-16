@@ -1,9 +1,9 @@
 import React from 'react';
 
 import App from '../App';
+import Home from '../home/Home';
 
 import { registerRoute } from '../../../routes/Register';
-import Home from '../home/Home';
 
 registerRoute({
   path: '/',
@@ -11,6 +11,10 @@ registerRoute({
   children: [
     {
       index: true,
+      element: <Home />,
+    },
+    {
+      path: ':categoryName',
       element: <Home />,
     },
   ],
