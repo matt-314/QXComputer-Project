@@ -15,6 +15,7 @@
             "peerDependencies": false,
             "packageDir": "./"
         }],
+        "import/prefer-default-export": "off",
         "max-len": "off"
     }
 }
