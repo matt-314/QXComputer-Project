@@ -11,7 +11,7 @@ export function useService() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
-  const fetchProductos = async (serviceName, method, params = []) => {
+  const fetchData = async (serviceName, method, params = []) => {
     try {
       setLoading(true);
       const response = await SERVICES.get(serviceName)[method](...params);
@@ -25,5 +25,5 @@ export function useService() {
     }
   };
 
-  return [data, loading, error, fetchProductos];
+  return [data, loading, error, fetchData];
 }
