@@ -1,0 +1,63 @@
+.iconFactory--primary {
+  fill: var(--color-primary);
+}
+
+.iconFactory--primary--contrast {
+  fill: var(--color-primary-contrast);
+}
+
+.iconFactory--secondary {
+  fill: var(--color-secondary);
+}
+
+.iconFactory--secondary--contrast {
+  fill: var(--color-secondary-contrast);
+}
+
+.iconFactory--tertiary {
+  fill: var(--color-tertiary);
+}
+
+.iconFactory--tertiary--contrast {
+  fill: var(--color-tertiary-contrast);
+}
+
+.iconFactory--success {
+  fill: var(--color-success);
+}
+
+.iconFactory--success--contrast {
+  fill: var(--color-success-contrast);
+}
+
+.iconFactory--danger {
+  fill: var(--color-danger);
+}
+
+.iconFactory--danger--contrast {
+  fill: var(--color-danger-contrast);
+}
+
+.iconFactory--warning {
+  fill: var(--color-warning);
+}
+
+.iconFactory--warning--contrast {
+  fill: var(--color-warning-contrast);
+}
+
+.iconFactory--neutral {
+  fill: var(--color-medium);
+}
+
+.iconFactory--neutral--contrast {
+  fill: var(--color-medium-contrast);
+}
+
+.iconFactory--light {
+  fill: var(--color-light);
+}
+
+.iconFactory--light--contrast {
+  fill: var(--color-light-contrast);
+}

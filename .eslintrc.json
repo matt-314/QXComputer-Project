@@ -9,6 +9,13 @@
         "sourceType": "module"
     },
     "rules": {
-        "import/no-extraneous-dependecies": "off"
+        "import/no-extraneous-dependencies": ["error", {
+            "devDependencies": false,
+            "optionalDependencies": false,
+            "peerDependencies": false,
+            "packageDir": "./"
+        }],
+        "import/prefer-default-export": "off",
+        "max-len": "off"
     }
 }

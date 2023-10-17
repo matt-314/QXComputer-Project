@@ -1,0 +1,16 @@
+@import "../../globals/styles/vars.css";
+
+header {
+  background-color: var(--color-primary);
+  padding: var(--app-padding);
+}
+
+header > *,
+main > * {
+  max-width: var(--app-max-width);
+  margin: 0 auto;
+}
+
+main {
+  padding: var(--app-padding);
+}

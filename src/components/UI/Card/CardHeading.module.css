@@ -1,0 +1,31 @@
+.heading {
+  padding: var(--card-padding);
+  min-height: 4rem;
+  max-height: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+}
+
+.heading__title {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  white-space: pre-wrap;
+}
+
+.heading__subtitle {
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  color: var(--color-medium);
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

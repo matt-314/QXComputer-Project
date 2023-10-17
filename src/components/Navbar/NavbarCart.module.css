@@ -1,10 +1,15 @@
 .cart {
   margin: 0 0.5rem;
   position: relative;
+  cursor: pointer;
+  appearance: none;
+  border: none;
+  background: none;
 }
 
 .cart__image {
   width: 1.5rem;
+  fill: var(--color-primary-contrast)
 }
 
 .cart__badge {
@@ -18,13 +23,13 @@
   font-size: 0.75rem;
   font-weight: bold;
   position: absolute;
-  left: 20px;
+  left: 37px;
   right: 0px;
-  bottom: 20px;
+  bottom: 35px;
   z-index: 100;
 }
 
 .cart__badge--color {
-  background-color: var(--primary700);
-  color: var(--neutral100);
+  background-color: var(--color-primary-contrast);
+  color: var(--color-primary);
 }

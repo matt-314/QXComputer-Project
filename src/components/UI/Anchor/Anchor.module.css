@@ -2,45 +2,41 @@
   text-decoration: none;
   transition: color 0.2s ease-in-out;
   border-radius: 3px;
-  font-weight: 700;
-  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.anchor:hover {
+  text-decoration: underline;
 }
 
 .anchor--primary {
-  color: var(--primary700);
-}
-
-.anchor--primary--solid {
-  color: var(--primary100);
-  background-color: var(--primary700);
-}
-
-.anchor--primary--outline {
-  border: 1px solid var(--primary700);
+  color: var(--color-primary);
 }
 
 .anchor--secondary {
-  color: var(--secondary700);
+  color: var(--color-secondary);
 }
 
-.anchor--secondary--solid {
-  color: var(--primary100);
-  background-color: var(--secondary100);
+.anchor--tertiary {
+  color: var(--color-tertiary);
 }
 
-.anchor--secondary--outline {
-  border: 1px solid var(--secondary700);
+.anchor--success {
+  color: var(--color-success);
+}
+
+.anchor--danger {
+  color: var(--color-danger);
+}
+
+.anchor--warning {
+  color: var(--color-warning);
 }
 
 .anchor--neutral {
-  color: var(--neutral700);
+  color: var(--color-medium);
 }
 
-.anchor--neutral--solid {
-  color: var(--neutral100);
-  background-color: var(--neutral700);
-}
-
-.anchor--neutral--outline {
-  border: 1px solid var(--neutral700);
+.anchor--light {
+  color: var(--color-light);
 }
