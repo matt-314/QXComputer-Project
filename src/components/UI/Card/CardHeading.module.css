@@ -4,7 +4,8 @@
   max-height: 4rem;
   height: 4rem;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .heading__title {
