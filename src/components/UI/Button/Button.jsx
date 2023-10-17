@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import IconFactory from '../../../assets/icons/IconFactory';
 
@@ -49,13 +50,13 @@ function getAnchorOrButton({
 }) {
   return href
     ? (
-      <a
-        href={href}
+      <Link
+        to={href}
         className={className}
         aria-label={ariaLabel}
       >
         {children}
-      </a>
+      </Link>
     ) : (
       <button
         type={type === 'button' ? 'button' : 'submit'}
