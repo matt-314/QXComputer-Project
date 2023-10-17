@@ -5,6 +5,8 @@ import { useService } from '../../../../hooks/service';
 
 import Item from './Item';
 
+import Spinner from '../../../../components/UI/Spinner/Spinner';
+
 import styles from './ItemListContainer.module.css';
 
 function ItemListContainer({ title, category }) {
@@ -18,7 +20,7 @@ function ItemListContainer({ title, category }) {
     <section>
       <h2>{ title }</h2>
       <div className={styles.itemList}>
-        {isLoading && <p>Loading...</p>}
+        {isLoading && <span className={styles.itemList__spinnerContainer}><Spinner /></span>}
         {!isLoading && error && <p>An error occurred while loading</p>}
         {!isLoading && !error && data && data.map((item) => (
           <Item
