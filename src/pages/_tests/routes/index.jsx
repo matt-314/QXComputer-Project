@@ -6,6 +6,7 @@ import CardTestPage from '../Card/CardTestPage';
 import TestPage from '../TestPage';
 
 import { registerRoute } from '../../../routes/Register';
+import SpinnerTestPage from '../Spinner/SpinnerTestPage';
 
 registerRoute({
   path: '/_test',
@@ -22,6 +23,10 @@ registerRoute({
     {
       path: 'Card',
       element: <CardTestPage />,
+    },
+    {
+      path: 'Spinner',
+      element: <SpinnerTestPage />,
     },
   ],
 });

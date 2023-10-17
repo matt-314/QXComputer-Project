@@ -1,0 +1,5 @@
+.spinnerTestPage__container {
+  display: inline-flex;
+  padding: 0.25rem;
+  border-radius: 50%;
+}
