@@ -1,0 +1,37 @@
+.detailOverview {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+.detailOverview__image {
+  width: 30%;
+}
+
+.detailOverview__info {
+  width: 30%;
+  padding: 0 1rem;
+}
+
+.detailOverview__price::before {
+  content: "$";
+  color: var(--color-success);
+  font-size: 2rem;
+}
+
+.detailOverview__price {
+  color: var(--color-success);
+  font-size: 2rem;
+}
+
+.detailOverview__actions {
+  display: flex;
+  flex-direction: column;
+}
+
+.detailOverview__actions > * {
+  flex-grow: 1;
+  margin: 0.25rem 0;
+}
