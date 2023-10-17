@@ -6,7 +6,7 @@ import Card from '../../../../components/UI/Card/Card';
 import styles from './Item.module.css';
 
 function Item({
-  thumbnail, title, description, price, className,
+  itemId, thumbnail, title, description, price, className,
 }) {
   return (
     <Card
@@ -18,7 +18,7 @@ function Item({
         {
           text: 'Mostrar más detalles',
           color: 'primary',
-          href: '#showMoreDetailes',
+          href: `/item/${itemId}`,
         },
       ]}
     >
@@ -40,6 +40,7 @@ function Item({
 }
 
 Item.propTypes = {
+  itemId: PropTypes.string.isRequired,
   thumbnail: PropTypes.shape({
     url: PropTypes.string,
     backgroundCoverMode: PropTypes.oneOf(['cover', 'contain', 'auto']),

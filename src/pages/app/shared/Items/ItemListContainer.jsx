@@ -23,6 +23,7 @@ function ItemListContainer({ title, category }) {
         {!isLoading && !error && data && data.map((item) => (
           <Item
             key={item.id}
+            itemId={item.id}
             title={item.title}
             thumbnail={item.thumbnail}
             description={item.description}
