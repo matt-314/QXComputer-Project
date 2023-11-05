@@ -3,6 +3,8 @@ import React, { useEffect } from 'react';
 
 import { useService } from '../../../../hooks/service';
 
+import { PRODUCTS } from '../../../../services';
+
 import Item from './Item';
 
 import Spinner from '../../../../components/UI/Spinner/Spinner';
@@ -13,7 +15,7 @@ function ItemListContainer({ title, category }) {
   const [data, isLoading, error, fetchProducts] = useService();
 
   useEffect(() => {
-    fetchProducts('products', 'getProducts', [{ limit: 6, category }]);
+    fetchProducts(PRODUCTS.SERVICE, PRODUCTS.GET_PRODUCTS, [{ limit: 6, category }]);
   }, [category]);
 
   return (
