@@ -15,7 +15,7 @@ registerRoute({
       element: <Home />,
     },
     {
-      path: ':categoryName',
+      path: '/categories/:categoryName',
       element: <Home />,
     },
     {
