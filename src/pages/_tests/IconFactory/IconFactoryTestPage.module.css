@@ -1,0 +1,11 @@
+.factoryTestPage__iconSection {
+  display: flex;
+}
+
+.factoryTestPage__iconSection__title {
+  text-transform: capitalize;
+}
+
+.factoryTestPage__iconSection > * {
+  margin: 1rem;
+}

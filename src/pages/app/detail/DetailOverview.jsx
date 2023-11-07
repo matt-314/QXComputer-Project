@@ -20,6 +20,10 @@ function DetailOverview({
             currency: 'ARS',
           }).format(productPrice)}
         </p>
+        <div>
+          <Button fill="outline" icon="plus" iconOnly size="sm" color="medium" />
+          <Button fill="outline" icon="plus" iconOnly size="sm" color="medium" />
+        </div>
         <div className={styles.detailOverview__actions}>
           <Button color="primary">Comprar ahora</Button>
           <Button color="primary" fill="outline">Agregar al carrito</Button>
