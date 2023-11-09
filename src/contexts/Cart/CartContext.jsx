@@ -16,29 +16,12 @@ const CartContext = React.createContext({});
 
 function CartProvider({ children }) {
   const [cartState, setCartState] = useState(defaultCarState);
-  const addNewProduct = (product, amount) => setCartState((prevState) => {
+  const saveProduct = (product, amount) => setCartState((prevState) => {
     const newItems = deepMapCopy(prevState.items);
-    const storedProduct = newItems.get(product.id) ?? { ...product, amount: 0 };
-    storedProduct.amount += amount;
-    const newTotalPrice = prevState.totalPrice + (product.price * amount);
+    const storedProduct = newItems.get(product.id) ?? product;
+    storedProduct.amount = amount;
+    const newTotalPrice = [...newItems.values()].reduce((acc, curr) => acc + (curr.price * curr.amount), 0);
     newItems.set(product.id, storedProduct);
-    return {
-      items: newItems,
-      totalPrice: newTotalPrice,
-    };
-  });
-  const removeProduct = (productId, amount) => setCartState((prevState) => {
-    const newItems = deepMapCopy(prevState.items);
-    const storedProduct = newItems.get(productId);
-    if (!storedProduct) {
-      return prevState;
-    }
-    storedProduct.amount -= amount;
-    if (storedProduct.amount <= 0) {
-      newItems.delete(productId);
-    }
-    const newTotalPrice = prevState.totalPrice - (storedProduct.price * amount);
-
     return {
       items: newItems,
       totalPrice: newTotalPrice,
@@ -47,9 +30,8 @@ function CartProvider({ children }) {
 
   const cartContextValue = useMemo(() => ({
     ...cartState,
-    addNewProduct,
-    removeProduct,
-  }), [cartState, addNewProduct, removeProduct]);
+    saveProduct,
+  }), [cartState, saveProduct]);
 
   return (
     <CartContext.Provider value={cartContextValue}>
