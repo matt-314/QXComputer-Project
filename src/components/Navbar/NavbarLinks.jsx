@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import Anchor from '../UI/Anchor/Anchor';
 
 import NavbarCart from './NavbarCart';
 import styles from './NavbarLinks.module.css';
 
+import { CartContext } from '../../contexts/Cart/CartContext';
+
 function NavbarLinks() {
+  const cartCtx = useContext(CartContext);
   const pageLinks = [
     { href: '/categories/components', text: 'Components' },
     { href: '/categories/laptops', text: 'Laptops' },
@@ -28,7 +31,7 @@ function NavbarLinks() {
         }
       </div>
       <div className={styles.accountLinks}>
-        <NavbarCart cartItems={0} />
+        <NavbarCart cartItems={cartCtx.items.size} />
       </div>
     </div>
   );
