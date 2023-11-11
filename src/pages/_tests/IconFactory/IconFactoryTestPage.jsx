@@ -5,7 +5,7 @@ import IconFactory from '../../../assets/icons/IconFactory';
 import styles from './IconFactoryTestPage.module.css';
 
 function IconFactoryTestPage() {
-  const icons = ['cart', 'kebab', 'plus', 'minus'];
+  const icons = ['cart', 'kebab', 'plus', 'minus', 'warning', 'success', 'error', 'cross'];
   const colors = ['primary', 'secondary', 'tertiary', 'success', 'danger', 'warning', 'neutral', 'light'];
 
   return (
