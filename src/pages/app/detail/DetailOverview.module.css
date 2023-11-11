@@ -6,6 +6,28 @@
   margin-bottom: 1rem;
 }
 
+.detailOverview__amount {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem 0;
+}
+
+.detailOverview__amount > * {
+  margin: 0 0.25rem;
+}
+
+.detailOverview__amountInput {
+  appearance: textfield;
+  margin: 0;
+  width: 30px;
+  font-size: 1.25rem;
+}
+
+.detailOverview__amountInput::-webkit-outer-spin-button,
+.detailOverview__amountInput::-webkit-inner-spin-button {
+  appearance: none;
+}
+
 .detailOverview__image {
   width: 30%;
 }
