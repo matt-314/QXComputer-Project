@@ -9,6 +9,8 @@
   --font-size-md: 1rem;
   --font-size-lg: 1.5rem;
   --font-size-xl: 2rem;
+  flex-grow: 0;
+  flex-shrink: 0;
   border: none;
   appearance: unset;
   padding: 0 0.75rem;
@@ -40,31 +42,41 @@ a.button {
 */
 /* XS */
 .button--xs {
+  min-height: var(--height-xs);
   height: var(--height-xs);
+  max-height: var(--height-xs);
   font-size: var(--font-size-xs);
 }
 
 /* SM */
 .button--sm {
+  min-height: var(--height-sm);
   height: var(--height-sm);
+  max-height: var(--height-sm);
   font-size: var(--font-size-sm);
 }
 
 /* MD */
 .button--md {
+  min-height: var(--height-md);
   height: var(--height-md);
+  max-height: var(--height-md);
   font-size: var(--font-size-md);
 }
 
 /* LG */
 .button--lg {
+  min-height: var(--height-lg);
   height: var(--height-lg);
+  max-height: var(--height-lg);
   font-size: var(--font-size-lg);
 }
 
 /* XL */
 .button--xl {
+  min-height: var(--height-xl);
   height: var(--height-xl);
+  max-height: var(--height-xl);
   font-size: var(--font-size-xl);
 }
 
@@ -100,6 +112,14 @@ a.button {
 
 .button--shape-square {
   border-radius: 0;
+}
+
+.button--shape--circle {
+  border-radius: 50%;
+  padding: 0.25rem;
+  min-height: fit-content;
+  height: fit-content;
+  max-height: fit-content;
 }
 
 /*

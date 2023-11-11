@@ -40,6 +40,7 @@ function getButtonClassName({
     default: styles['button--shape--default'],
     square: styles['button--shape--square'],
     round: styles[`button--shape--round--${size}`],
+    circle: styles['button--shape--circle'],
   };
 
   return `${styles.button} ${styles[`button--${size}`]} ${shapes[shape]} ${fills[fill]} ${extraClassName ?? ''}`;
@@ -117,7 +118,7 @@ Button.propTypes = {
   type: PropTypes.oneOf(['button', 'submit']),
   fill: PropTypes.oneOf(['solid', 'outline', 'ghost']),
   size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'xl']),
-  shape: PropTypes.oneOf(['default', 'square', 'round']),
+  shape: PropTypes.oneOf(['default', 'square', 'round', 'circle']),
   icon: PropTypes.string,
   iconOnly: PropTypes.bool,
   onClick: PropTypes.func,
